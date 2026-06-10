@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* import any google fonts you want to use above:
+@import url('');
+*/
+/* Viewport Sizing */
+* {box-sizing: border-box;}
+html,body { 
+min-height: 100dvh; 
+margin: 0;
+}
+body { 
+display: flex;
+flex-direction: column;
+}
+/* Color Palette */
+header {
+background-color: #0F398C;
+height: 155px;
+background-image: linear-gradient(to right, #FFEB0F 3%, #A4A3B3 17%, #385773 80%);   
+}
+nav {
+position: sticky;
+top: 0;
+background-color: #86A5C4;
+}
+nav a{
+font-family: "Alegreya Sans SC", sans-serif;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.25rem;
+}
+nav a:link {
+color: #020659;  
+text-shadow: -1px 0px 3px #F8F0E3;
+}
+nav a:hover {
+color: #0511F2;  
+text-shadow: -1px 0px 3px #edeb78;  
+}
+nav a:visited {
+color: #020659;  
+text-shadow: -1px 0px 3px #F8F0E3;
+}
+main {
+flex-grow: 1;  
+color: #061A35;
+background-color: #F6F4EC;  
+font-family: "Roboto", sans-serif; 
+}
+footer {
+color: ;
+background-color: #7C7271;
+font-family: "Roboto", sans-serif; 
+text-align: center;
+margin: 0;
+text-shadow: -1px 0px 2px darkgray;
+font-weight: bold;
+font-size: 0.9rem;
+}  
+h1 {
+/* clamp(minimum, preferred, maximum) */
+  font-size: clamp(1.4rem, 5dvw, 2.5rem); 
+}
+img {
+  max-width: 100%;
+  height: auto;
+  float: right;
+  padding: 2px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5%;
+  border: 0.5px solid #504E53;
+  background-color: #504E53;  
+}
+.bg_img1 {
+background-image: url(https://images-forclass-02112024.netlify.app/Woman_Laptop_Image_forWeb_no_bg.png);
+background-position: -20px -20px;
+background-size: auto 200px;
+background-repeat: no-repeat;
+height: 100%;
+}
+h1 {
+margin: 0;
+margin-left: 190px;
+margin-right: 20px;
+font-family: "Alegreya Sans SC", sans-serif;
+color: #E6CE65;
+text-shadow: 3px 3px 3px #021221;
+text-align: right;
+padding: 1rem .25rem;
+height: 100%;
+}
+/* Your links are now wrapped in a div
+and are a flexbox */
+.navbar-links {
+display: flex;
+justify-content: center;
+gap: 8dvw;
+}
+
+.navbar-links a {
+padding: 10px 0;  
+}
+
+main {
+  padding: 20px clamp(20px, 10vw, 400px); 
+}
+
+footer {
+text-align: center;
+}
+.strong {
+font-weight: 500;
+}
+.italic {
+font-style: italic;
+}
+.page {text-decoration: underline;}
+
+/* MEDIA QUERY FOR MOBILE */
+@media (max-width: 576px) {
+  img {
+  float: none;
+  margin: 10px auto 10px auto;
+  display: block;
+  }  
+  nav {order: -1;}
+/* HAMBURGER MENU THAT WORKS WITH JAVASCRIPT */
+  .navbar-links { 
+    flex-direction: column;
+    gap: 0;    
+  }
+  nav a { 
+    border-bottom: 1px solid black;
+  }  
+  
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    display: flex;
+  }
+ 
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    /* ADDED A box-shadow so the lines stand out when scrolling */
+    box-shadow: 1px 1px black;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  
+  .navbar-links.active {
+    display: flex;
+  }  
+
+  .navbar-links a {
+    text-align: center;  
+  }
+}   
+
+
